@@ -332,7 +332,7 @@
           cloud_ref: "/api/cloud?name={{ configure_nsx_cloud.cloud_name }}"
           content_lib:
             id: "{{ contentlib_results[item.url][item.content_library] }}"
-          name: vcenter-nsx
+          name: "{{ item.name }}"
           vcenter_credentials_ref: "/api/cloudconnectoruser?name={{ item.name }}"
           vcenter_url: "{{ item.url }}"
         loop: "{{ configure_nsx_vcenter }}"
